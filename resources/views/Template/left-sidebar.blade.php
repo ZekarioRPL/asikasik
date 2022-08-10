@@ -60,7 +60,7 @@
           </li>
 
           @endif 
-          <li class="nav-item">
+          <d class="nav-item">
             <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -78,7 +78,7 @@
               </li>
               @endif
               @if (auth()->user()->level =="admin")
-              <li class="nav-item">
+              <li class="nav nav-item">
                 <a href="{{ route('data-karyawan') }}"  class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Presensi Keseluruhan</p>
@@ -86,7 +86,55 @@
               </li>
               @endif
             </ul>
-          </li>
+            <li class="nav-item">
+                <a href="/pengumuman" class="nav-link">
+                    <i class="nav-icon fas fa-bullhorn"></i>
+                    <p>
+                        Pengumuman
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/jadwalpiket" class="nav-link">
+                <i class="nav-icon fas fa-calendar-check"></i>
+                    <p>
+                      Jadwal Piket
+                    </p>
+                </a>
+            </li>
+            @if (auth()->user()->level =="admin")
+            <li class="nav-item">
+                <a href="/catatankerja" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                      catatan kerja
+                    </p>
+                </a>
+            </li>
+            @endif
+            <li class="nav-item">
+                <a href="/cuti" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                      Pengajuan Cuti
+                    </p>
+                </a>
+            </li> <li class="nav-item">
+                <a href="{{ route('profil') }}" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                      Profil
+                    </p>
+                </a>
+            </li>
+            </li> <li class="nav-item">
+                <a href="/user" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                      Data User
+                    </p>
+                </a>
+            </li>
           <li class="nav-item">
                     <a href="{{ route('logout') }}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
